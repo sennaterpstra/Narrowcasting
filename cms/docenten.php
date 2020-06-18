@@ -27,12 +27,7 @@
         </div>
         <div class="col-9">
             <!-- Content -->
-            <h1>CMS</h1>
-            <h2>Welkom 
-            <?php 
-                echo $_SESSION['name'];
-            ?>
-            </h2>
+            <h1>Docenten</h1>
         </div>
     </div>
 </body>

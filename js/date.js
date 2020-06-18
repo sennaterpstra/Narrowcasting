@@ -9,6 +9,10 @@ if(min < 10){
     min = "0" + min;
 }
 
+if(h < 10){
+    h = "0" + h;
+}
+
 day = n.getDay();
 var dayarray = new Array("Zondag", "Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag")
 dday = dayarray[day]

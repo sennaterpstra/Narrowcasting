@@ -19,3 +19,6 @@ html,body{
 }
 
 /* cms sidebar */
+.navbar-custom{
+	color: black !important;
+}
