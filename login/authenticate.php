@@ -1,15 +1,15 @@
 <?php
 session_start();
 require "../db.php";
-// Try and connect using the info above.
+// Connect to database.
 $conn = mysqli_connect($mysql_ip, $mysql_user, $mysql_password, $mysql_dbname) or die('try again in some minutes, please');
 
 if ( !isset($_POST['username'], $_POST['password']) ) {
-	// Could not get the data that should have been sent.
+	// When there are empty fields.
 	exit('Please fill both the username and password fields!');
 }
 
-// Prepare our SQL, preparing the SQL statement will prevent SQL injection.
+
 if ($stmt = $conn->prepare('SELECT id, password FROM accounts WHERE username = ?')) {
 	// Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
 	$stmt->bind_param('s', $_POST['username']);
@@ -20,11 +20,11 @@ if ($stmt = $conn->prepare('SELECT id, password FROM accounts WHERE username = ?
     if ($stmt->num_rows > 0) {
         $stmt->bind_result($id, $password);
         $stmt->fetch();
-        // Account exists, now we verify the password.
+        // Account exist, now check password.
         // Note: remember to use password_hash in your registration file to store the hashed passwords.
         if (password_verify($_POST['password'], $password)) {
-            // Verification success! User has loggedin!
-            // Create sessions so we know the user is logged in, they basically act like cookies but remember the data on the server.
+            // When verification succeeded.
+            // Create sessions to know the user is logged in.
             session_regenerate_id();
             $_SESSION['loggedin'] = TRUE;
             $_SESSION['name'] = $_POST['username'];
