@@ -1,0 +1,21 @@
+html,body{
+	height: 100%;
+	/* Hide scrollbars */
+  	overflow: hidden;
+}
+
+.logo{
+	width: 100%;
+}
+
+.dateplace {
+	position: absolute;
+	bottom: 0px;
+}
+
+.submitbtn {
+	background-color: #080a66;
+	color: white;
+}
+
+/* cms sidebar */
