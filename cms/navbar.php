@@ -9,10 +9,7 @@
             <a class="nav-link text-dark h4" href="../login/logout.php">Uitloggen</a>
         </div>
         <li class="nav-item">
-            <a class="nav-link text-dark" href="index.php">Home</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" href="mededelingen.php">Mededelingen</a>
+            <a class="nav-link text-dark" href="index.php">Mededelingen</a>
         </li>
         <li class="nav-item">
             <a class="nav-link text-dark" href="docenten.php">Docenten</a>

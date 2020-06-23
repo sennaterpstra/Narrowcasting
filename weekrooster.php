@@ -2,7 +2,8 @@
 <html>
 <head>
 	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="refresh" content="10; URL=index.php">
 	<title>Narrowcasting</title>
 	<link rel="stylesheet" type="text/css" href="style/main.css">
 	<?php
@@ -18,27 +19,29 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-12">
-			<!-- Weekrooster -->
-			<table class="table">
-				<thead class="thead-dark">
-				    <tr>
-				      <th scope="col">Dag:</th>
-				      <th scope="col">Tijd:</th>
-				      <th scope="col">Klas:</th>
-				      <th scope="col">Activiteit:</th>
-				      <th scope="col">Lokaal:</th>
-				      <th scope="col">Docent:</th>
-				    </tr>
-				</thead>
-		 		<tbody>
-		 			<?php
-						include "rooster.php";
-					?>
-		  		</tbody>
-			</table>
+		<div class="col-1">
+			<h3>dag</h3>
+		</div>
+		<div class="col-1">
+			<h3>tijd</h3>
+		</div>
+		<div class="col-1">
+			<h3>klas</h3>
+		</div>
+		<div class="col-6">
+			<h3>activiteit</h3>
+		</div>
+		<div class="col-1">
+			<h3>lokaal</h3>
+		</div>
+		<div class="col-2">
+			<h3>docent</h3>
 		</div>
 	</div>
+
+	<?php
+		include "showrooster.php";
+	?>
 	<script type="text/javascript" src="js/date.js"></script>
 </body>
 </html>

@@ -2,7 +2,8 @@
 <html>
 <head>
 	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="refresh" content="10; URL=weekrooster.php">
 	<title>Narrowcasting</title>
 	<link rel="stylesheet" type="text/css" href="style/main.css">
 	<?php
@@ -15,14 +16,18 @@
 			<div class="container">
 				<!-- Mededelingen -->
 				<h1>Mededelingen</h1><br>
-				<h4>Titel</h4>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-
-				<h4>Titel</h4>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-
-				<h4>Titel</h4>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+				<?php
+					include "db.php";
+					$sql = "SELECT titel, tekst FROM mededelingen";
+					$conn = mysqli_connect($mysql_ip, $mysql_user, $mysql_password, $mysql_dbname) or die('try again in some minutes, please');
+					$result = mysqli_query($conn, $sql);
+	
+					if($result->num_rows > 0){
+						while($row = $result->fetch_assoc()){
+							echo "<div class='card mt-2'><div class='card-body'><h1>".$row['titel']."</h1><p>".$row['tekst']."</p></div></div>";
+						}
+					}
+				?>
 			</div>
 		</div>
 		<div class="col-3">
