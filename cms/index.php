@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CMS</title>
     <link rel="stylesheet" type="text/css" href="../style/main.css">
-    <script src="../js/app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <?php
         require "../links.php";
         require "modals.php";
@@ -42,11 +42,12 @@
                 if($result->num_rows > 0){
                     while($row = $result->fetch_assoc()){
                         echo "<div class='card mt-2'><div class='card-body' data-id='".$row['id']."'><h1>".$row['titel']."</h1><p>".$row['tekst']."</p><button class=
-                        'btn btn-danger' id='deleteBtn' onclick='deleteMededeling()'>Verwijder</button></div></div>";
+                        'btn btn-danger deletebtn' id='deleteBtn'>Verwijder</button></div></div>";
                     }
                 }
             ?>
         </div>
     </div>
+    <script src="../js/app.js"></script>
 </body>
 </html>

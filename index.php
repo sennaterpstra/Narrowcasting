@@ -31,7 +31,9 @@
 			</div>
 		</div>
 		<div class="col-3">
-			<img src="assets/logo.jpg" class="logo">
+			<a href="cms">
+				<img src="assets/logo.jpg" class="logo">
+			</a>
 			<!-- Docenten Aanwezig -->
 			<h4>Docenten aanwezig:</h4>
 			<h4 class="dateplace" id="date"></h4>

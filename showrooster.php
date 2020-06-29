@@ -6,12 +6,10 @@
     $result = mysqli_query($conn, $sql);
 
     if($result->num_rows > 0){
-        echo "<div class='row'>";
         while($row = $result->fetch_assoc()){
-            echo "<div class='col-1'><h3>".$row['dag']."</h3></div><div class='col-1'><h3>".$row['tijd']."</h3></div><div class='col-1'><h3>".$row['klas']."</h3></div><div class='col-6'><h3>".$row['activiteit']."</h3></div>
-            <div class='col-1'><h3>".$row['lokaal']."</h3></div><div class='col-2'><h3>".$row['docent']."</h3></div>";
+            echo "<div class='row'><div class='col-1'><h3>".$row['dag']."</h3></div><div class='col-1'><h3>".$row['tijd']."</h3></div><div class='col-1'><h3>".$row['klas']."</h3></div><div class='col-6'><h3>".$row['activiteit']."</h3></div>
+            <div class='col-1'><h3>".$row['lokaal']."</h3></div><div class='col-2'><h3>".$row['docent']."</h3></div></div>";
         }
-        echo "</div>";
     }
     mysqli_close($conn);
 ?>
