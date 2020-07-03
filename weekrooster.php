@@ -11,6 +11,7 @@
 	?>
 </head>
 <body>
+<div class="customcontainer">
 	<div class="row">
 		<div class="col-12">
 			<div class="row">
@@ -18,30 +19,31 @@
 			</div>
 		</div>
 	</div>
-	<div class="row">
-		<div class="col-1">
-			<h3>dag</h3>
+		<div class="row border-bottom">
+			<div class="col-1">
+				<h3>dag</h3>
+			</div>
+			<div class="col-1">
+				<h3>tijd</h3>
+			</div>
+			<div class="col-1">
+				<h3>klas</h3>
+			</div>
+			<div class="col-6">
+				<h3>activiteit</h3>
+			</div>
+			<div class="col-1">
+				<h3>lokaal</h3>
+			</div>
+			<div class="col-2">
+				<h3>docent</h3>
+			</div>
 		</div>
-		<div class="col-1">
-			<h3>tijd</h3>
-		</div>
-		<div class="col-1">
-			<h3>klas</h3>
-		</div>
-		<div class="col-6">
-			<h3>activiteit</h3>
-		</div>
-		<div class="col-1">
-			<h3>lokaal</h3>
-		</div>
-		<div class="col-2">
-			<h3>docent</h3>
-		</div>
-	</div>
 
-	<?php
-		include "showrooster.php";
-	?>
+		<?php
+			include "showrooster.php";
+		?>
+	</div>
 	<script type="text/javascript" src="js/date.js"></script>
 </body>
 </html>

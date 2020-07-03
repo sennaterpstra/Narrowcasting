@@ -22,3 +22,9 @@ html,body{
 .navbar-custom{
 	color: black !important;
 }
+
+.customcontainer
+{
+	margin-left: 3vw;
+	margin-right: 3vw;
+}
