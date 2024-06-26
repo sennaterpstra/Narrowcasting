@@ -1,7 +1,7 @@
 # Narrowcasting
 
 ## De opdracht
-Dit was een project voor school in het 2e leerjaar. De opdracht was om een systeem te maken voor de monitor die op de gang van de ICT afdeling hangt. 
+Dit was een project voor school in het 2e leerjaar MBO. De opdracht was om een systeem te maken voor de monitor die op de gang van de ICT afdeling hangt. 
 Met de volgende eisen:
 - Weergave van de lessen
 - Aanwezige docenten op de afdeling
